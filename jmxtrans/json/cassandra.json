@@ -66,7 +66,7 @@
                      }
                   }
 				],
-				"obj": "org.apache.cassandra.db:type=MutationStage",
+				"obj": "org.apache.cassandra.request:type=MutationStage",
 				"resultAlias": "cassandra.stage.MutationStage",
 				"attr": [
                         "ActiveCount",
@@ -85,7 +85,7 @@
                      }
                   }
 				],
-				"obj": "org.apache.cassandra.db:type=ReadRepairStage",
+				"obj": "org.apache.cassandra.request:type=ReadRepairStage",
 				"resultAlias": "cassandra.stage.ReadRepairStage",
 				"attr": [
                         "ActiveCount",
@@ -104,7 +104,7 @@
                      }
                   }
 				],
-				"obj": "org.apache.cassandra.db:type=ReadStage",
+				"obj": "org.apache.cassandra.request:type=ReadStage",
 				"resultAlias": "cassandra.stage.ReadStage",
 				"attr": [
                         "ActiveCount",
@@ -123,7 +123,7 @@
                      }
                   }
 				],
-				"obj": "org.apache.cassandra.db:type=ReplicateOnWriteStage",
+				"obj": "org.apache.cassandra.request:type=ReplicateOnWriteStage",
 				"resultAlias": "cassandra.stage.ReplicateOnWriteStage",
 				"attr": [
                         "ActiveCount",
@@ -142,7 +142,7 @@
                      }
                   }
 				],
-				"obj": "org.apache.cassandra.db:type=RequestResponseStage",
+				"obj": "org.apache.cassandra.request:type=RequestResponseStage",
 				"resultAlias": "cassandra.stage.RequestResponseStage",
 				"attr": [
                         "ActiveCount",
