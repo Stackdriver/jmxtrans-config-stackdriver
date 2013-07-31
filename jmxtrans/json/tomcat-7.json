@@ -49,7 +49,7 @@
                   }
                ],
                 "obj": "Catalina:type=GlobalRequestProcessor,name=*",
-            	"resultAlias": "tomcat.requestProcessor",
+            	"resultAlias": "tomcat.global-request-processor",
             	"attr": [
                 	"bytesReceived",
                 	"bytesSent",
@@ -69,7 +69,7 @@
                   }
                ],
                 "obj": "Catalina:type=DataSource,context=*,host=*,class=javax.sql.DataSource,name=*",
-            	"resultAlias": "tomcat.dataSource",
+            	"resultAlias": "tomcat.data-source",
             	"attr": [
                 	"numActive",
                 	"numIdle"
