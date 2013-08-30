@@ -49,7 +49,7 @@
                   }
                ],
                 "obj": "Catalina:type=GlobalRequestProcessor,name=*",
-            	"resultAlias": "tomcat.global-request-processor",
+            	"resultAlias": "tomcat.requestProcessor",
             	"attr": [
                 	"bytesReceived",
                 	"bytesSent",
