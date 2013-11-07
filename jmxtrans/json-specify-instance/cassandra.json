@@ -340,6 +340,25 @@
                         "CurrentlyBlockedTasks",
                         "PendingTasks"
 				]
+            },
+            {
+              "outputWriters":[
+                  {
+                    "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                    "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "source": "AWS_INSTANCE_ID"
+                    }
+                  }
+				],
+                "obj": "org.apache.cassandra.db:type=StorageProxy",
+                "resultAlias": "cassandra.internal.StorageProxy",
+                "attr": [
+                        "RecentReadLatencyMicros",
+                        "RecentWriteLatencyMicros",
+                        "RecentRangeLatencyMicros",
+                        "HintsInProgress"
+                ]
             }
          ],
          "numQueryThreads":2
