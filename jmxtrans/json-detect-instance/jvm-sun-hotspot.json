@@ -1,8 +1,8 @@
 {
    "servers":[
       {
-         "port":"7199",
-         "host":"localhost",
+         "port":"JMX_PORT",
+         "host":"JMX_HOST",
          "queries":[
             {
                "outputWriters":[
