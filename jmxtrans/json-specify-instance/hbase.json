@@ -7,7 +7,7 @@
         {
           "outputWriters" : [
             {
-       		"@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
                 "settings": {
                   "token": "STACKDRIVER_API_KEY",
                   "source": "AWS_INSTANCE_ID"
