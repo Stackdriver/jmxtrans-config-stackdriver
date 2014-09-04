@@ -1,0 +1,53 @@
+{
+  "servers" : [
+    {
+      "port" : "HBASE_JMX_PORT",
+      "host" : "HBASE_JMX_HOST",
+      "queries" : [
+        {
+          "outputWriters" : [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ],
+          "obj" : "Hadoop:service=HBase,name=Master,sub=Server",
+          "attr" : [ "averageLoad", "numRegionServers","numDeadRegionServers" ],
+          "resultAlias": "sdhbase.Master.Server"
+        },
+        {
+          "outputWriters" : [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ],
+          "obj" : "Hadoop:service=HBase,name=IPC,sub=IPC",
+          "attr" : [ "sentBytes","receivedBytes","queueSize","numOpenConnections"  ],
+          "resultAlias": "sdhbase.IPC.IPC"
+        },
+        {
+          "outputWriters" : [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ],
+          "obj" : "Hadoop:service=HBase,name=RegionServer,sub=Server",
+          "attr" : [ "blockCacheCount", "blockCacheEvictionCount", "blockCacheFreeSize", "blockCacheHitCount", "blockCacheHitPercent", "blockCacheMissCount", "blockCacheSize", "compactionQueueLength", "flushQueueLength", "memStoreSize", "storeCount", "readRequestsCount", "storeFileIndexSizeMB", "writeRequestsCount", "storeCount", "slowAppendCount", "slowPutCount", "slowGetCount" ],
+          "resultAlias": "sdhbase.RegionServer.RegionServerStatistics"
+        }
+      ],
+      "numQueryThreads" : 3
+    }
+  ]
+}
