@@ -43,7 +43,7 @@
             }
           ],
           "obj" : "Hadoop:service=HBase,name=RegionServer,sub=Server",
-          "attr" : [ "blockCacheCount", "blockCacheEvictionCount", "blockCacheFreeSize", "blockCacheHitCount", "blockCacheHitPercent", "blockCacheMissCount", "blockCacheSize", "compactionQueueLength", "flushQueueLength", "memStoreSize", "storeCount", "readRequestsCount", "storeFileIndexSizeMB", "writeRequestsCount", "totalRequestsCount", "storeCount", "slowAppendCount", "slowPutCount", "slowGetCount" ],
+          "attr" : [ "blockCacheCount", "blockCacheEvictionCount", "blockCacheFreeSize", "blockCacheHitCount", "blockCountHitPercent", "blockCacheMissCount", "blockCacheSize", "compactionQueueLength", "flushQueueLength", "memStoreSize", "storeCount", "readRequestCount", "storeFileIndexSize", "writeRequestCount", "totalRequestCount", "slowAppendCount", "slowPutCount", "slowGetCount" ],
           "resultAlias": "sdhbase.RegionServer.RegionServerStatistics"
         }
       ],
