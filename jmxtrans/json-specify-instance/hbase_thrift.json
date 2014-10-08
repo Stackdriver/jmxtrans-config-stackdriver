@@ -15,7 +15,7 @@
             }
           ],
           "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftOne",
-          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeinQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
+          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
           "resultAlias": "sdhbase.Thrift.ThriftOne"
         },
         {
@@ -29,7 +29,7 @@
             }
           ],
           "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftTwo",
-          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeinQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
+          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
           "resultAlias": "sdhbase.Thrift.ThriftTwo"
         }
       ],
