@@ -17,7 +17,7 @@
                "obj": "org.apache.activemq:type=Broker,brokerName=localhost",
                "resultAlias": "sdamq.broker",
                "attr":[
-               	  "AverageMessageSize",
+                  "AverageMessageSize",
                   "CurrentConnectionsCount",
                   "JobSchedulerStoreLimit",
                   "JobSchedulerStorePercentUsage",
