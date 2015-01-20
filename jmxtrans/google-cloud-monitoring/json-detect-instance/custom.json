@@ -1,0 +1,45 @@
+{
+   "servers":[
+      {
+         "port":"JMX PORT",
+         "host":"localhost",
+         "queries":[
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "detectInstance": "AWS"
+                     }
+                  }
+               ],
+               "obj": "MBEAN PATH",
+               "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
+               "attr":[
+               	  "MBEAN ATTRIBUTE 1",
+                  "MBEAN ATTRIBUTE 2",
+                  "MBEAN ATTRIBUTE 3"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "detectInstance": "AWS"
+                     }
+                  }
+               ],
+               "obj": "MBEAN 2 PATH",
+               "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
+               "attr":[
+               	  "MBEAN ATTRIBUTE"
+               ]
+            }
+         ],
+         "numQueryThreads":2
+      }
+   ]
+}

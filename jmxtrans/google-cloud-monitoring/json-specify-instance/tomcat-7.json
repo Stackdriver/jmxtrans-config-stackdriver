@@ -1,0 +1,82 @@
+{
+   "servers":[
+      {
+         "port":"TOMCAT_JMX_PORT",
+         "host":"TOMCAT_JMX_HOST",
+         "queries":[
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+                "obj": "Catalina:type=ThreadPool,name=*",
+            	"resultAlias": "tomcat.connectors",
+            	"attr": [
+                	"currentThreadCount",
+                	"currentThreadsBusy", 
+                	""
+            	]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+                "obj": "Catalina:type=Manager,context=*,host=*",
+            	"resultAlias": "tomcat.manager",
+            	"attr": [
+                	"activeSessions"
+            	]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+                "obj": "Catalina:type=GlobalRequestProcessor,name=*",
+            	"resultAlias": "tomcat.requestProcessor",
+            	"attr": [
+                	"bytesReceived",
+                	"bytesSent",
+                	"errorCount",
+                	"processingTime",
+                	"requestCount"
+            	]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+                "obj": "Catalina:type=DataSource,context=*,host=*,class=javax.sql.DataSource,name=*",
+            	"resultAlias": "tomcat.data-source",
+            	"attr": [
+                	"numActive",
+                	"numIdle"
+            	]
+            }
+         ],
+         "numQueryThreads":2
+      }
+   ]
+}
