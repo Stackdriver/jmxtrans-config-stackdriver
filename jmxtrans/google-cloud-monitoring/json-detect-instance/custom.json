@@ -10,6 +10,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.google.stackdriver.com",
                         "detectInstance": "AWS"
                      }
                   }
@@ -28,6 +29,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.google.stackdriver.com",
                         "detectInstance": "AWS"
                      }
                   }
