@@ -11,7 +11,7 @@
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
                         "url":"jmx-gateway.google.stackdriver.com",
-                        "detectInstance": "AWS"
+                        "detectInstance": "GCE"
                      }
                   }
                ],
@@ -45,7 +45,7 @@
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
                         "url":"jmx-gateway.google.stackdriver.com",
-                        "detectInstance": "AWS",
+                        "detectInstance": "GCE",
                         "typeNames" : ["destinationName"]
                      }
                   }
@@ -68,7 +68,7 @@
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
                         "url":"jmx-gateway.google.stackdriver.com",
-                        "detectInstance": "AWS",
+                        "detectInstance": "GCE",
                         "typeNames" : ["destinationName"]
                      }
                   }

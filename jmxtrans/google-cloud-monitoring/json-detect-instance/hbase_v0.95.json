@@ -12,7 +12,7 @@
                   "token": "STACKDRIVER_API_KEY",
                 "url":"jmx-gateway.google.stackdriver.com",
                   "url":"jmx-gateway.google.stackdriver.com",
-                  "detectInstance": "AWS"
+                  "detectInstance": "GCE"
                 }
               }
           ],
