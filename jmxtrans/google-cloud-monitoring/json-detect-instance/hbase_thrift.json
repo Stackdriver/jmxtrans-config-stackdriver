@@ -1,0 +1,41 @@
+{
+  "servers" : [
+    {
+      "port" : "HBASE_THRIFT_JMX_PORT",
+      "host" : "HBASE_THRIFT_JMX_HOST",
+      "queries" : [
+        {
+          "outputWriters" : [
+            {
+        	  "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url":"jmx-gateway.google.stackdriver.com",
+                "detectInstance": "GCE"
+              }
+            }
+          ],
+          "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftOne",
+          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
+          "resultAlias": "sdhbase.Thrift.ThriftOne"
+        },
+        {
+          "outputWriters" : [
+            {
+           	  "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url":"jmx-gateway.google.stackdriver.com",
+                "detectInstance": "GCE"
+              }
+            }
+          ],
+          "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftTwo",
+          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
+          "resultAlias": "sdhbase.Thrift.ThriftTwo"
+        }
+      ],
+      "numQueryThreads" : 2
+    }
+  ]
+}

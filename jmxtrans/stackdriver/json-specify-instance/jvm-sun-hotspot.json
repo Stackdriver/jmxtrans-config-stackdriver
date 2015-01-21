@@ -1,0 +1,105 @@
+{
+   "servers":[
+      {
+         "port":"JMX_PORT",
+         "host":"JMX_HOST",
+         "queries":[
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "java.lang:type=Threading",
+               "resultAlias": "jvm.localhost.Threading",
+               "attr":[
+               	  "DaemonThreadCount",
+                  "ThreadCount",
+                  "PeakThreadCount"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "java.lang:type=Memory",
+               "resultAlias": "jvm.localhost.Memory",
+               "attr":[
+                  "HeapMemoryUsage",
+                  "NonHeapMemoryUsage"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "java.lang:type=Runtime",
+               "resultAlias": "jvm.localhost.Runtime",
+               "attr":[
+                  "Uptime"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "java.lang:type=OperatingSystem",
+               "resultAlias": "jvm.localhost.os",
+               "attr":[
+	                "CommittedVirtualMemorySize",
+	                "FreePhysicalMemorySize",
+	                "FreeSwapSpaceSize",
+	                "OpenFileDescriptorCount",
+	                "ProcessCpuTime",
+	                "SystemLoadAverage"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "AWS_INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "java.lang:type=GarbageCollector,name=*",
+               "resultAlias": "jvm.localhost.gc",
+               "attr":[
+	                "CollectionCount",
+	                "CollectionTime"
+               ]
+            }
+         ],
+         "numQueryThreads":2
+      }
+   ]
+}

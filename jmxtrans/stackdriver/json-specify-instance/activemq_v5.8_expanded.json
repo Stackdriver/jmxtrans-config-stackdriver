@@ -1,0 +1,93 @@
+{
+   "servers":[
+      {
+         "host":"ACTIVEMQ_JMX_HOST",
+         "port":"ACTIVEMQ_JMX_PORT",
+         "queries":[
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "INSTANCE_ID"
+                     }
+                  }
+               ],
+               "obj": "org.apache.activemq:type=Broker,brokerName=localhost",
+               "resultAlias": "sdamq.broker",
+               "attr":[
+                  "AverageMessageSize",
+                  "CurrentConnectionsCount",
+                  "JobSchedulerStoreLimit",
+                  "JobSchedulerStorePercentUsage",
+                  "MaxMessageSize",
+                  "MemoryLimit",
+                  "MemoryPercentUsage",
+                  "MinMessageSize",
+                  "StoreLimit",
+                  "StorePercentUsage",
+                  "TempLimit",
+                  "TempPercentUsage",
+                  "TotalConnectionsCount",
+                  "TotalConsumerCount",
+                  "TotalDequeueCount",
+                  "TotalEnqueueCount",
+                  "TotalMessageCount",
+                  "TotalProducerCount"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "INSTANCE_ID",
+                        "typeNames" : ["destinationName"]
+                     }
+                  }
+               ],
+               "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Topic,destinationName=*",
+               "resultAlias": "activemq.topic",
+               "attr":[
+                  "ConsumerCount",
+                  "ProducerCount",
+                  "EnqueueCount",
+                  "DequeueCount",
+                  "InFlightCount",
+                  "ExpiredCount"
+               ]
+            },
+            {
+               "outputWriters":[
+                  {
+                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                     "settings":{
+                        "token":"STACKDRIVER_API_KEY",
+                        "url":"jmx-gateway.stackdriver.com",
+                        "source": "INSTANCE_ID",
+                        "typeNames" : ["destinationName"]
+                     }
+                  }
+               ],
+               "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Queue,destinationName=*",
+               "resultAlias": "activemq.queue",
+               "attr":[
+                  "ConsumerCount",
+                  "ProducerCount",
+                  "QueueSize",
+                  "EnqueueCount",
+                  "DequeueCount",
+                  "InFlightCount",
+                  "ExpiredCount"
+               ]
+            }
+
+         ],
+         "numQueryThreads":2
+      }
+   ]
+}

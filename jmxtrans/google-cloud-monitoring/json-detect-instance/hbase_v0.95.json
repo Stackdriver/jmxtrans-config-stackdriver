@@ -1,0 +1,27 @@
+{
+  "servers" : [
+    {
+      "port" : "HBASE_JMX_PORT",
+      "host" : "HBASE_JMX_HOST",
+      "queries" : [
+        {
+          "outputWriters" : [
+            {
+        	"@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+                "settings": {
+                  "token": "STACKDRIVER_API_KEY",
+                "url":"jmx-gateway.google.stackdriver.com",
+                  "url":"jmx-gateway.google.stackdriver.com",
+                  "detectInstance": "GCE"
+                }
+              }
+          ],
+          "obj" : "hadoop:service=RegionServer,name=RegionServerStatistics",
+          "attr" : [ "blockCacheExpressCachingRatio", "blockCacheHitCachingRatio", "callQueueLength", "compactionQueueLength", "compactionQueueSize", "flushQueueSize", "hdfsBlocksLocalityIndex", "memstoreSizeMB", "numberOfOnlineRegions", "readRequestsCount", "slowHLogAppendCount", "usedHeapMB", "writeRequestsCount", "blockCacheCount", "blockCacheEvictedCount", "blockCacheFreeMB", "blockCacheHitCount", "blockCacheMissCount", "blockCacheSizeMB", "fsPreadLatencyNumOps", "fsReadLatencyNumOps", "fsWriteLatencyNumOps", "NumberOfStores", "NumberOfStorefiles", "requestsPerSecond", "storeFileIndexSizeMB" ],
+          "resultAlias": "sdhbase.RegionServer.RegionServerStatistics"
+        }
+      ],
+      "numQueryThreads" : 2
+    }
+  ]
+}
