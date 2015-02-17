@@ -10,7 +10,7 @@
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"jmx-gateway.stackdriver.com",
+                "url":"https://jmx-gateway.stackdriver.com",
                 "source": "AWS_INSTANCE_ID"
               }
             }
@@ -25,7 +25,7 @@
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"jmx-gateway.stackdriver.com",
+                "url":"https://jmx-gateway.stackdriver.com",
                 "source": "AWS_INSTANCE_ID"
               }
             }
@@ -40,7 +40,7 @@
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"jmx-gateway.stackdriver.com",
+                "url":"https://jmx-gateway.stackdriver.com",
                 "source": "AWS_INSTANCE_ID"
               }
             }
