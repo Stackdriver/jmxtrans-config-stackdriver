@@ -10,7 +10,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -28,7 +28,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -47,7 +47,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -65,7 +65,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -85,7 +85,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -105,7 +105,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -125,7 +125,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -145,7 +145,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -165,7 +165,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -185,7 +185,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -205,7 +205,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -225,7 +225,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -245,7 +245,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -265,7 +265,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -285,7 +285,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -305,7 +305,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -325,7 +325,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }
@@ -345,7 +345,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com",
+                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
                         "detectInstance": "AWS"
                      }
                   }

@@ -10,7 +10,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -28,7 +28,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -47,7 +47,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -65,7 +65,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -85,7 +85,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -105,7 +105,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -125,7 +125,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -145,7 +145,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -165,7 +165,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -185,7 +185,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -205,7 +205,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -225,7 +225,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -245,7 +245,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -265,7 +265,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -285,7 +285,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -305,7 +305,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -325,7 +325,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -345,7 +345,7 @@
                      "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                      "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                      }
                   }
@@ -365,7 +365,7 @@
                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
                     "settings":{
                         "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com",
+                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
                         "detectInstance": "GCE"
                     }
                   }
