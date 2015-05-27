@@ -1,0 +1,44 @@
+{
+  "serverInfo": {
+    "port": "TOMCAT_JMX_PORT",
+    "host": "TOMCAT_JMX_HOST",
+    "numQueryThreads": 2
+  },
+  "queryInfos": [
+    {
+      "obj": "Catalina:type=ThreadPool,name=*",
+      "resultAlias": "tomcat.connectors",
+      "attr": [
+        "currentThreadCount",
+        "currentThreadsBusy",
+        ""
+      ]
+    },
+    {
+      "obj": "Catalina:type=Manager,context=*,host=*",
+      "resultAlias": "tomcat.manager",
+      "attr": [
+        "activeSessions"
+      ]
+    },
+    {
+      "obj": "Catalina:type=GlobalRequestProcessor,name=*",
+      "resultAlias": "tomcat.requestProcessor",
+      "attr": [
+        "bytesReceived",
+        "bytesSent",
+        "errorCount",
+        "processingTime",
+        "requestCount"
+      ]
+    },
+    {
+      "obj": "Catalina:type=DataSource,context=*,host=*,class=javax.sql.DataSource,name=*",
+      "resultAlias": "tomcat.data-source",
+      "attr": [
+        "numActive",
+        "numIdle"
+      ]
+    }
+  ]
+}
