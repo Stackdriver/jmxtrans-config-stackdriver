@@ -1,47 +1,47 @@
 {
-   "servers":[
-      {
-         "port":"JMX PORT",
-         "host":"localhost",
-         "queries":[
+  "servers": [
+    {
+      "port": "JMX PORT",
+      "host": "localhost",
+      "numQueryThreads": 2,
+      "queries": [
+        {
+          "obj": "MBEAN PATH",
+          "attr": [
+            "MBEAN ATTRIBUTE 1",
+            "MBEAN ATTRIBUTE 2",
+            "MBEAN ATTRIBUTE 3"
+          ],
+          "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
+          "outputWriters": [
             {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "source": "AWS_INSTANCE_ID"
-                     }
-                  }
-               ],
-               "obj": "MBEAN PATH",
-               "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
-               "attr":[
-               	  "MBEAN ATTRIBUTE 1",
-                  "MBEAN ATTRIBUTE 2",
-                  "MBEAN ATTRIBUTE 3"
-               ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "source": "AWS_INSTANCE_ID"
-                     }
-                  }
-               ],
-               "obj": "MBEAN 2 PATH",
-               "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
-               "attr":[
-               	  "MBEAN ATTRIBUTE"
-               ]
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "source": "GCE_INSTANCE_ID"
+              }
             }
-         ],
-         "numQueryThreads":2
-      }
-   ]
+          ]
+        },
+        {
+          "obj": "MBEAN 2 PATH",
+          "attr": [
+            "MBEAN ATTRIBUTE"
+          ],
+          "resultAlias": "MYAPP.MYSUBYSTEM.PREFIX",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "source": "GCE_INSTANCE_ID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,86 +1,86 @@
 {
-   "servers":[
-      {
-         "port":"TOMCAT_JMX_PORT",
-         "host":"TOMCAT_JMX_HOST",
-         "queries":[
+  "servers": [
+    {
+      "port": "TOMCAT_JMX_PORT",
+      "host": "TOMCAT_JMX_HOST",
+      "numQueryThreads": 2,
+      "queries": [
+        {
+          "obj": "Catalina:type=ThreadPool,name=*",
+          "attr": [
+            "currentThreadCount",
+            "currentThreadsBusy",
+            ""
+          ],
+          "resultAlias": "tomcat.connectors",
+          "outputWriters": [
             {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS"
-                     }
-                  }
-               ],
-                "obj": "Catalina:type=ThreadPool,name=*",
-            	"resultAlias": "tomcat.connectors",
-            	"attr": [
-                	"currentThreadCount",
-                	"currentThreadsBusy", 
-                	""
-            	]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS"
-                     }
-                  }
-               ],
-                "obj": "Catalina:type=Manager,context=*,host=*",
-            	"resultAlias": "tomcat.manager",
-            	"attr": [
-                	"activeSessions"
-            	]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS"
-                     }
-                  }
-               ],
-                "obj": "Catalina:type=GlobalRequestProcessor,name=*",
-            	"resultAlias": "tomcat.requestProcessor",
-            	"attr": [
-                	"bytesReceived",
-                	"bytesSent",
-                	"errorCount",
-                	"processingTime",
-                	"requestCount"
-            	]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS"
-                     }
-                  }
-               ],
-                "obj": "Catalina:type=DataSource,context=*,host=*,class=javax.sql.DataSource,name=*",
-            	"resultAlias": "tomcat.data-source",
-            	"attr": [
-                	"numActive",
-                	"numIdle"
-            	]
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS"
+              }
             }
-         ],
-         "numQueryThreads":2
-      }
-   ]
+          ]
+        },
+        {
+          "obj": "Catalina:type=Manager,context=*,host=*",
+          "attr": [
+            "activeSessions"
+          ],
+          "resultAlias": "tomcat.manager",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "Catalina:type=GlobalRequestProcessor,name=*",
+          "attr": [
+            "bytesReceived",
+            "bytesSent",
+            "errorCount",
+            "processingTime",
+            "requestCount"
+          ],
+          "resultAlias": "tomcat.requestProcessor",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "Catalina:type=DataSource,context=*,host=*,class=javax.sql.DataSource,name=*",
+          "attr": [
+            "numActive",
+            "numIdle"
+          ],
+          "resultAlias": "tomcat.data-source",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

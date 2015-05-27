@@ -1,0 +1,121 @@
+Differences for ../stackdriver/json-specify-instance/activemq_v5.8_basic.json:
+Values differ: INSTANCE_ID vs AWS_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/activemq_v5.8_basic.json:
+Values differ: INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../stackdriver/json-specify-instance/activemq_v5.8_expanded.json:
+Values differ: INSTANCE_ID vs AWS_INSTANCE_ID
+Values differ: INSTANCE_ID vs AWS_INSTANCE_ID
+Values differ: INSTANCE_ID vs AWS_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/activemq_v5.8_expanded.json:
+Values differ: INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../stackdriver/json-specify-instance/cassandra-06.json:
+Dict lengths differ: 0 vs 1
+only in dict2: servers
+
+Differences for ../google-cloud-monitoring/json-specify-instance/cassandra-06.json:
+Dict lengths differ: 0 vs 1
+only in dict2: servers
+
+Differences for ../stackdriver/json-detect-instance/cassandra.json:
+Values differ: 7199 vs CASSANDRA_PORT
+Values differ: localhost vs CASSANDRA_HOST
+
+Differences for ../google-cloud-monitoring/json-detect-instance/cassandra.json:
+Values differ: 7199 vs CASSANDRA_PORT
+Values differ: localhost vs CASSANDRA_HOST
+
+Differences for ../google-cloud-monitoring/json-specify-instance/cassandra.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/custom.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/hbase_thrift.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/hbase_v0.95.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/hbase_v0.98.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/jboss.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/jvm-sun-hotspot.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/kafka.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+
+Differences for ../google-cloud-monitoring/json-specify-instance/tomcat-7.json:
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+Values differ: AWS_INSTANCE_ID vs GCE_INSTANCE_ID
+

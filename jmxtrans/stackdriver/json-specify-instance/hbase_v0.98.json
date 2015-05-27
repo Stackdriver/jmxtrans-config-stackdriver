@@ -1,56 +1,84 @@
 {
-  "servers" : [
+  "servers": [
     {
-      "port" : "HBASE_JMX_PORT",
-      "host" : "HBASE_JMX_HOST",
-      "queries" : [
+      "port": "HBASE_JMX_PORT",
+      "host": "HBASE_JMX_HOST",
+      "numQueryThreads": 3,
+      "queries": [
         {
-          "outputWriters" : [
+          "obj": "Hadoop:service=HBase,name=Master,sub=Server",
+          "attr": [
+            "averageLoad",
+            "numRegionServers",
+            "numDeadRegionServers"
+          ],
+          "resultAlias": "sdhbase.Master.Server",
+          "outputWriters": [
             {
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"https://jmx-gateway.stackdriver.com/v1/custom",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
                 "source": "AWS_INSTANCE_ID"
               }
             }
-          ],
-          "obj" : "Hadoop:service=HBase,name=Master,sub=Server",
-          "attr" : [ "averageLoad", "numRegionServers","numDeadRegionServers" ],
-          "resultAlias": "sdhbase.Master.Server"
+          ]
         },
         {
-          "outputWriters" : [
+          "obj": "Hadoop:service=HBase,name=IPC,sub=IPC",
+          "attr": [
+            "sentBytes",
+            "receivedBytes",
+            "queueSize",
+            "numOpenConnections"
+          ],
+          "resultAlias": "sdhbase.IPC.IPC",
+          "outputWriters": [
             {
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"https://jmx-gateway.stackdriver.com/v1/custom",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
                 "source": "AWS_INSTANCE_ID"
               }
             }
-          ],
-          "obj" : "Hadoop:service=HBase,name=IPC,sub=IPC",
-          "attr" : [ "sentBytes","receivedBytes","queueSize","numOpenConnections"  ],
-          "resultAlias": "sdhbase.IPC.IPC"
+          ]
         },
         {
-          "outputWriters" : [
+          "obj": "Hadoop:service=HBase,name=RegionServer,sub=Server",
+          "attr": [
+            "blockCacheCount",
+            "blockCacheEvictionCount",
+            "blockCacheFreeSize",
+            "blockCacheHitCount",
+            "blockCountHitPercent",
+            "blockCacheMissCount",
+            "blockCacheSize",
+            "compactionQueueLength",
+            "flushQueueLength",
+            "memStoreSize",
+            "storeCount",
+            "readRequestCount",
+            "storeFileIndexSize",
+            "writeRequestCount",
+            "totalRequestCount",
+            "slowAppendCount",
+            "slowPutCount",
+            "slowGetCount"
+          ],
+          "resultAlias": "sdhbase.RegionServer.RegionServerStatistics",
+          "outputWriters": [
             {
               "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"https://jmx-gateway.stackdriver.com/v1/custom",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
                 "source": "AWS_INSTANCE_ID"
               }
             }
-          ],
-          "obj" : "Hadoop:service=HBase,name=RegionServer,sub=Server",
-          "attr" : [ "blockCacheCount", "blockCacheEvictionCount", "blockCacheFreeSize", "blockCacheHitCount", "blockCountHitPercent", "blockCacheMissCount", "blockCacheSize", "compactionQueueLength", "flushQueueLength", "memStoreSize", "storeCount", "readRequestCount", "storeFileIndexSize", "writeRequestCount", "totalRequestCount", "slowAppendCount", "slowPutCount", "slowGetCount" ],
-          "resultAlias": "sdhbase.RegionServer.RegionServerStatistics"
+          ]
         }
-      ],
-      "numQueryThreads" : 3
+      ]
     }
   ]
 }

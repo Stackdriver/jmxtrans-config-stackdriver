@@ -1,8 +1,8 @@
 {
   "servers": [
     {
-      "port": "CASSANDRA_PORT",
-      "host": "CASSANDRA_HOST",
+      "port": "7199",
+      "host": "localhost",
       "numQueryThreads": 2,
       "queries": [
         {
@@ -18,7 +18,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -37,7 +37,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -55,13 +55,13 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
         },
         {
-          "obj": "org.apache.cassandra.request:type=MutationStage",
+          "obj": "org.apache.cassandra.concurrent:type=ROW-MUTATION-STAGE",
           "attr": [
             "ActiveCount",
             "CompletedTasks",
@@ -75,13 +75,13 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
         },
         {
-          "obj": "org.apache.cassandra.request:type=ReadRepairStage",
+          "obj": "org.apache.cassandra.concurrent:type=CONSISTENCY-MANAGER",
           "attr": [
             "ActiveCount",
             "CompletedTasks",
@@ -95,13 +95,13 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
         },
         {
-          "obj": "org.apache.cassandra.request:type=ReadStage",
+          "obj": "org.apache.cassandra.concurrent:type=ROW-READ-STAGE",
           "attr": [
             "ActiveCount",
             "CompletedTasks",
@@ -115,7 +115,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -135,13 +135,13 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
         },
         {
-          "obj": "org.apache.cassandra.request:type=RequestResponseStage",
+          "obj": "org.apache.cassandra.concurrent:type=RESPONSE-STAGE",
           "attr": [
             "ActiveCount",
             "CompletedTasks",
@@ -155,7 +155,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -175,7 +175,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -195,7 +195,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -215,7 +215,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -235,7 +235,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -255,7 +255,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -275,7 +275,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -295,7 +295,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -315,7 +315,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -335,7 +335,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
@@ -355,27 +355,7 @@
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
                 "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
-              }
-            }
-          ]
-        },
-        {
-          "obj": "org.apache.cassandra.db:type=StorageProxy",
-          "attr": [
-            "RecentReadLatencyMicros",
-            "RecentWriteLatencyMicros",
-            "RecentRangeLatencyMicros",
-            "HintsInProgress"
-          ],
-          "resultAlias": "cassandra.internal.StorageProxy",
-          "outputWriters": [
-            {
-              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
-              "settings": {
-                "token": "STACKDRIVER_API_KEY",
-                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "detectInstance": "GCE"
+                "source": "GCE_INSTANCE_ID"
               }
             }
           ]
