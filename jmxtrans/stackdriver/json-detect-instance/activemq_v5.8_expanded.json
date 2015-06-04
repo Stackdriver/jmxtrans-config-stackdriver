@@ -1,93 +1,96 @@
 {
-   "servers":[
-      {
-         "host":"ACTIVEMQ_JMX_HOST",
-         "port":"ACTIVEMQ_JMX_PORT",
-         "queries":[
+  "servers": [
+    {
+      "host": "ACTIVEMQ_JMX_HOST",
+      "port": "ACTIVEMQ_JMX_PORT",
+      "numQueryThreads": 2,
+      "queries": [
+        {
+          "obj": "org.apache.activemq:type=Broker,brokerName=localhost",
+          "attr": [
+            "AverageMessageSize",
+            "CurrentConnectionsCount",
+            "JobSchedulerStoreLimit",
+            "JobSchedulerStorePercentUsage",
+            "MaxMessageSize",
+            "MemoryLimit",
+            "MemoryPercentUsage",
+            "MinMessageSize",
+            "StoreLimit",
+            "StorePercentUsage",
+            "TempLimit",
+            "TempPercentUsage",
+            "TotalConnectionsCount",
+            "TotalConsumerCount",
+            "TotalDequeueCount",
+            "TotalEnqueueCount",
+            "TotalMessageCount",
+            "TotalProducerCount"
+          ],
+          "resultAlias": "sdamq.broker",
+          "outputWriters": [
             {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS"
-                     }
-                  }
-               ],
-               "obj": "org.apache.activemq:type=Broker,brokerName=localhost",
-               "resultAlias": "sdamq.broker",
-               "attr":[
-                  "AverageMessageSize",
-                  "CurrentConnectionsCount",
-                  "JobSchedulerStoreLimit",
-                  "JobSchedulerStorePercentUsage",
-                  "MaxMessageSize",
-                  "MemoryLimit",
-                  "MemoryPercentUsage",
-                  "MinMessageSize",
-                  "StoreLimit",
-                  "StorePercentUsage",
-                  "TempLimit",
-                  "TempPercentUsage",
-                  "TotalConnectionsCount",
-                  "TotalConsumerCount",
-                  "TotalDequeueCount",
-                  "TotalEnqueueCount",
-                  "TotalMessageCount",
-                  "TotalProducerCount"
-               ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS",
-                        "typeNames" : ["destinationName"]
-                     }
-                  }
-               ],
-               "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Topic,destinationName=*",
-               "resultAlias": "activemq.topic",
-               "attr":[
-                  "ConsumerCount",
-                  "ProducerCount",
-                  "EnqueueCount",
-                  "DequeueCount",
-                  "InFlightCount",
-                  "ExpiredCount"
-               ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS",
-                        "typeNames" : ["destinationName"]
-                     }
-                  }
-               ],
-               "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Queue,destinationName=*",
-               "resultAlias": "activemq.queue",
-               "attr":[
-                  "ConsumerCount",
-                  "ProducerCount",
-                  "QueueSize",
-                  "EnqueueCount",
-                  "DequeueCount",
-                  "InFlightCount",
-                  "ExpiredCount"
-               ]
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS"
+              }
             }
-
-         ],
-         "numQueryThreads":2
-      }
-   ]
+          ]
+        },
+        {
+          "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Topic,destinationName=*",
+          "attr": [
+            "ConsumerCount",
+            "ProducerCount",
+            "EnqueueCount",
+            "DequeueCount",
+            "InFlightCount",
+            "ExpiredCount"
+          ],
+          "resultAlias": "activemq.topic",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS",
+                "typeNames": [
+                  "destinationName"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Queue,destinationName=*",
+          "attr": [
+            "ConsumerCount",
+            "ProducerCount",
+            "QueueSize",
+            "EnqueueCount",
+            "DequeueCount",
+            "InFlightCount",
+            "ExpiredCount"
+          ],
+          "resultAlias": "activemq.queue",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS",
+                "typeNames": [
+                  "destinationName"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

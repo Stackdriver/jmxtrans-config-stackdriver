@@ -1,0 +1,64 @@
+{
+  "serverInfo": {
+    "host": "ACTIVEMQ_JMX_HOST",
+    "port": "ACTIVEMQ_JMX_PORT",
+    "numQueryThreads": 2
+  },
+  "queryInfos": [
+    {
+      "obj": "org.apache.activemq:type=Broker,brokerName=localhost",
+      "resultAlias": "sdamq.broker",
+      "attr": [
+        "AverageMessageSize",
+        "CurrentConnectionsCount",
+        "JobSchedulerStoreLimit",
+        "JobSchedulerStorePercentUsage",
+        "MaxMessageSize",
+        "MemoryLimit",
+        "MemoryPercentUsage",
+        "MinMessageSize",
+        "StoreLimit",
+        "StorePercentUsage",
+        "TempLimit",
+        "TempPercentUsage",
+        "TotalConnectionsCount",
+        "TotalConsumerCount",
+        "TotalDequeueCount",
+        "TotalEnqueueCount",
+        "TotalMessageCount",
+        "TotalProducerCount"
+      ]
+    },
+    {
+      "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Topic,destinationName=*",
+      "resultAlias": "activemq.topic",
+      "attr": [
+        "ConsumerCount",
+        "ProducerCount",
+        "EnqueueCount",
+        "DequeueCount",
+        "InFlightCount",
+        "ExpiredCount"
+      ],
+      "typeNames": [
+        "destinationName"
+      ]
+    },
+    {
+      "obj": "org.apache.activemq:type=Broker,brokerName=localhost,destinationType=Queue,destinationName=*",
+      "resultAlias": "activemq.queue",
+      "attr": [
+        "ConsumerCount",
+        "ProducerCount",
+        "QueueSize",
+        "EnqueueCount",
+        "DequeueCount",
+        "InFlightCount",
+        "ExpiredCount"
+      ],
+      "typeNames": [
+        "destinationName"
+      ]
+    }
+  ]
+}

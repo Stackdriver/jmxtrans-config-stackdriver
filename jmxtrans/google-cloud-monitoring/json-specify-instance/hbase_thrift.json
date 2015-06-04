@@ -1,41 +1,55 @@
 {
-  "servers" : [
+  "servers": [
     {
-      "port" : "HBASE_THRIFT_JMX_PORT",
-      "host" : "HBASE_THRIFT_JMX_HOST",
-      "queries" : [
+      "port": "HBASE_THRIFT_JMX_PORT",
+      "host": "HBASE_THRIFT_JMX_HOST",
+      "numQueryThreads": 2,
+      "queries": [
         {
-          "outputWriters" : [
+          "obj": "Hadoop:service=HBase,name=Thrift,sub=ThriftOne",
+          "attr": [
+            "callQueueLen",
+            "SlowThriftCall_mean",
+            "TimeInQueue_mean",
+            "ThriftCall_mean",
+            "BatchGet_mean",
+            "BatchMutate_mean"
+          ],
+          "resultAlias": "sdhbase.Thrift.ThriftOne",
+          "outputWriters": [
             {
-        	  "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "source": "AWS_INSTANCE_ID"
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "source": "GCE_INSTANCE_ID"
               }
             }
-          ],
-          "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftOne",
-          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
-          "resultAlias": "sdhbase.Thrift.ThriftOne"
+          ]
         },
         {
-          "outputWriters" : [
+          "obj": "Hadoop:service=HBase,name=Thrift,sub=ThriftTwo",
+          "attr": [
+            "callQueueLen",
+            "SlowThriftCall_mean",
+            "TimeInQueue_mean",
+            "ThriftCall_mean",
+            "BatchGet_mean",
+            "BatchMutate_mean"
+          ],
+          "resultAlias": "sdhbase.Thrift.ThriftTwo",
+          "outputWriters": [
             {
-           	  "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
               "settings": {
                 "token": "STACKDRIVER_API_KEY",
-                "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                "source": "AWS_INSTANCE_ID"
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "source": "GCE_INSTANCE_ID"
               }
             }
-          ],
-          "obj" : "Hadoop:service=HBase,name=Thrift,sub=ThriftTwo",
-          "attr" : [ "callQueueLen", "SlowThriftCall_mean", "TimeInQueue_mean", "ThriftCall_mean", "BatchGet_mean", "BatchMutate_mean" ],
-          "resultAlias": "sdhbase.Thrift.ThriftTwo"
+          ]
         }
-      ],
-      "numQueryThreads" : 2
+      ]
     }
   ]
 }

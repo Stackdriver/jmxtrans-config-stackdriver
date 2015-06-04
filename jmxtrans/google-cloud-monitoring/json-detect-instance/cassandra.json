@@ -1,386 +1,386 @@
 {
-   "servers":[
-      {
-         "port":"7199",
-         "host":"localhost",
-         "queries":[
+  "servers": [
+    {
+      "port": "CASSANDRA_PORT",
+      "host": "CASSANDRA_HOST",
+      "numQueryThreads": 2,
+      "queries": [
+        {
+          "obj": "org.apache.cassandra.db:type=StorageService",
+          "attr": [
+            "Load",
+            "ExceptionCount"
+          ],
+          "resultAlias": "cassandra.storageservice",
+          "outputWriters": [
             {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-               ],
-               "obj": "org.apache.cassandra.db:type=StorageService",
-               "resultAlias": "cassandra.storageservice",
-               "attr":[
-               		"Load",
-               		"ExceptionCount"
-               ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-               ],
-               "obj": "org.apache.cassandra.db:type=Commitlog",
-               "resultAlias": "cassandra.commitlog",
-               "attr":[
-			   	  "CompletedTasks",
-			      "PendingTasks",
-				  "TotalCommitlogSize"
-               ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.db:type=CompactionManager",
-				"resultAlias": "cassandra.compactionmanager",
-				"attr": [
-                        "PendingTasks",
-                        "CompletedTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.request:type=MutationStage",
-				"resultAlias": "cassandra.stage.MutationStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.request:type=ReadRepairStage",
-				"resultAlias": "cassandra.stage.ReadRepairStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.request:type=ReadStage",
-				"resultAlias": "cassandra.stage.ReadStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.request:type=ReplicateOnWriteStage",
-				"resultAlias": "cassandra.stage.ReplicateOnWriteStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.request:type=RequestResponseStage",
-				"resultAlias": "cassandra.stage.RequestResponseStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=AntiEntropySessions",
-				"resultAlias": "cassandra.internal.AntiEntropySessions",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=AntiEntropyStage",
-				"resultAlias": "cassandra.internal.AntiEntropyStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=FlushWriter",
-				"resultAlias": "cassandra.internal.FlushWriter",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=GossipStage",
-				"resultAlias": "cassandra.internal.GossipStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=HintedHandoff",
-				"resultAlias": "cassandra.internal.HintedHandoff",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=InternalResponseStage",
-				"resultAlias": "cassandra.internal.InternalResponseStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=MemtablePostFlusher",
-				"resultAlias": "cassandra.internal.MemtablePostFlusher",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=MigrationStage",
-				"resultAlias": "cassandra.internal.MigrationStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=MiscStage",
-				"resultAlias": "cassandra.internal.MiscStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                     }
-                  }
-				],
-				"obj": "org.apache.cassandra.internal:type=StreamStage",
-				"resultAlias": "cassandra.internal.StreamStage",
-				"attr": [
-                        "ActiveCount",
-                        "CompletedTasks",
-                        "CurrentlyBlockedTasks",
-                        "PendingTasks"
-				]
-            },
-            {
-              "outputWriters":[
-                  {
-                    "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                    "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.google.stackdriver.com/v1/custom",
-                        "detectInstance": "GCE"
-                    }
-                  }
-				],
-                "obj": "org.apache.cassandra.db:type=StorageProxy",
-                "resultAlias": "cassandra.internal.StorageProxy",
-                "attr": [
-                        "RecentReadLatencyMicros",
-                        "RecentWriteLatencyMicros",
-                        "RecentRangeLatencyMicros",
-                        "HintsInProgress"
-                ]
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
             }
-         ],
-         "numQueryThreads":2
-      }
-   ]
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.db:type=Commitlog",
+          "attr": [
+            "CompletedTasks",
+            "PendingTasks",
+            "TotalCommitlogSize"
+          ],
+          "resultAlias": "cassandra.commitlog",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.db:type=CompactionManager",
+          "attr": [
+            "PendingTasks",
+            "CompletedTasks"
+          ],
+          "resultAlias": "cassandra.compactionmanager",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.request:type=MutationStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.stage.MutationStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.request:type=ReadRepairStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.stage.ReadRepairStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.request:type=ReadStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.stage.ReadStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.request:type=ReplicateOnWriteStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.stage.ReplicateOnWriteStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.request:type=RequestResponseStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.stage.RequestResponseStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=AntiEntropySessions",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.AntiEntropySessions",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=AntiEntropyStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.AntiEntropyStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=FlushWriter",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.FlushWriter",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=GossipStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.GossipStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=HintedHandoff",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.HintedHandoff",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=InternalResponseStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.InternalResponseStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=MemtablePostFlusher",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.MemtablePostFlusher",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=MigrationStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.MigrationStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=MiscStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.MiscStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.internal:type=StreamStage",
+          "attr": [
+            "ActiveCount",
+            "CompletedTasks",
+            "CurrentlyBlockedTasks",
+            "PendingTasks"
+          ],
+          "resultAlias": "cassandra.internal.StreamStage",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "org.apache.cassandra.db:type=StorageProxy",
+          "attr": [
+            "RecentReadLatencyMicros",
+            "RecentWriteLatencyMicros",
+            "RecentRangeLatencyMicros",
+            "HintsInProgress"
+          ],
+          "resultAlias": "cassandra.internal.StorageProxy",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.google.stackdriver.com/v1/custom",
+                "detectInstance": "GCE"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

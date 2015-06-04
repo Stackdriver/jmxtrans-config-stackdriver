@@ -1,59 +1,81 @@
 {
-   "servers":[
-      {
-         "port":"8004",
-         "host":"localhost",
-         "queries":[
+  "servers": [
+    {
+      "port": "8004",
+      "host": "localhost",
+      "numQueryThreads": 2,
+      "queries": [
+        {
+          "obj": "jboss.web:type=ThreadPool,name=*",
+          "attr": [
+            "currentThreadCount",
+            "currentThreadsBusy"
+          ],
+          "resultAlias": "jboss.threads",
+          "outputWriters": [
             {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS",
-                        "typeNames" : [ "name" ]
-                     }
-                  }
-               ],
-                "obj" : "jboss.web:type=ThreadPool,name=*",
-      			"resultAlias": "jboss.threads",
-      			"attr" : [ "currentThreadCount", "currentThreadsBusy"]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS",
-                        "typeNames" : [ "name" ]
-                     }
-                  }
-               ],
-                "obj" : "jboss.web:type=GlobalRequestProcessor,name=*",
-      			"resultAlias": "jboss.requests",
-      			"attr" : [ "bytesReceived", "bytesSent", "errorCount", "maxTime", "processingTime", "requestCount"  ]
-            },
-            {
-               "outputWriters":[
-                  {
-                     "@class":"com.googlecode.jmxtrans.model.output.StackdriverWriter",
-                     "settings":{
-                        "token":"STACKDRIVER_API_KEY",
-                        "url":"https://jmx-gateway.stackdriver.com/v1/custom",
-                        "detectInstance": "AWS",
-                        "typeNames" : [ "name" ]
-                     }
-                  }
-               ],
-                "obj" : "jboss.jca:service=ManagedConnectionPool,name=*",
-      			"resultAlias": "jboss.datasources",
-      			"attr" : [ "ConnectionCount", "ConnectionCreatedCount", "InUseConnectionCount",	"MaxConnectionsInUseCount", "AvailableConnectionCount" ]
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS",
+                "typeNames": [
+                  "name"
+                ]
+              }
             }
-         ],
-         "numQueryThreads":2
-      }
-   ]
+          ]
+        },
+        {
+          "obj": "jboss.web:type=GlobalRequestProcessor,name=*",
+          "attr": [
+            "bytesReceived",
+            "bytesSent",
+            "errorCount",
+            "maxTime",
+            "processingTime",
+            "requestCount"
+          ],
+          "resultAlias": "jboss.requests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS",
+                "typeNames": [
+                  "name"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "obj": "jboss.jca:service=ManagedConnectionPool,name=*",
+          "attr": [
+            "ConnectionCount",
+            "ConnectionCreatedCount",
+            "InUseConnectionCount",
+            "MaxConnectionsInUseCount",
+            "AvailableConnectionCount"
+          ],
+          "resultAlias": "jboss.datasources",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "detectInstance": "AWS",
+                "typeNames": [
+                  "name"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "serverInfo": {
+    "port": "8004",
+    "host": "localhost",
+    "numQueryThreads": 2
+  },
+  "queryInfos": [
+    {
+      "obj": "jboss.web:type=ThreadPool,name=*",
+      "resultAlias": "jboss.threads",
+      "attr": [
+        "currentThreadCount",
+        "currentThreadsBusy"
+      ],
+      "typeNames": [
+        "name"
+      ]
+    },
+    {
+      "obj": "jboss.web:type=GlobalRequestProcessor,name=*",
+      "resultAlias": "jboss.requests",
+      "attr": [
+        "bytesReceived",
+        "bytesSent",
+        "errorCount",
+        "maxTime",
+        "processingTime",
+        "requestCount"
+      ],
+      "typeNames": [
+        "name"
+      ]
+    },
+    {
+      "obj": "jboss.jca:service=ManagedConnectionPool,name=*",
+      "resultAlias": "jboss.datasources",
+      "attr": [
+        "ConnectionCount",
+        "ConnectionCreatedCount",
+        "InUseConnectionCount",
+        "MaxConnectionsInUseCount",
+        "AvailableConnectionCount"
+      ],
+      "typeNames": [
+        "name"
+      ]
+    }
+  ]
+}
