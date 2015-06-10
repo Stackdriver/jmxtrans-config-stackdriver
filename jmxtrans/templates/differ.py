@@ -35,7 +35,7 @@ def diffAny(obj1, obj2, result):
 
 
 def diffList(list1, list2, result):
-    """Helper method that handles lists""".
+    """Helper method that handles lists."""
     if (len(list1) != len(list2)):
         result.append("List lengths differ: {0} vs {1}".format(
           len(list1), len(list2)))
@@ -47,7 +47,7 @@ def diffList(list1, list2, result):
 
 
 def diffDict(dict1, dict2, result):
-    """Helper method that handles dictionaries""".
+    """Helper method that handles dictionaries."""
     if (len(dict1) != len(dict2)):
         result.append("Dict lengths differ: {0} vs {1}".format(
           len(dict1), len(dict2)))
