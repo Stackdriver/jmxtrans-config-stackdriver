@@ -1,0 +1,554 @@
+{
+  "servers": [
+    {
+      "port": "KAFKA_JMX_PORT",
+      "host": "KAFKA_JMX_HOST",
+      "queries": [
+        {
+          "obj": "kafka.log:type=LogFlushStats,name=LogFlushRateAndTimeMs",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.log.LogFlushStats.LogFlush",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=BrokerTopicMetrics,name=BytesInPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.BrokerTopicMetrics.AllTopicsBytesIn",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=BrokerTopicMetrics,name=FailedFetchRequestsPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.BrokerTopicMetrics.AllTopicsFailedFetchRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=BrokerTopicMetrics,name=FailedProduceRequestsPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.BrokerTopicMetrics.AllTopicsFailedProduceRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=BrokerTopicMetrics,name=MessagesInPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.BrokerTopicMetrics.AllTopicsMessagesIn",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=BrokerTopicMetrics,name=BytesOutPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.BrokerTopicMetrics.AllTopicsBytesOut",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaManager.UnderReplicatedPartitions",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaManager,name=PartitionCount",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaManager.PartitionCount",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaManager,name=LeaderCount",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaManager.LeaderCount",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaManager,name=IsrShrinksPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaManager.ISRShrinks",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaManager,name=IsrExpandsPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaManager.ISRExpands",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaFetcherManager,name=MaxLag,clientId=Replica",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaFetcherManager.MaxLag",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ReplicaFetcherManager,name=MinFetchRate,clientId=Replica",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ReplicaFetcherManager.MinFetchRate",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ProducerRequestPurgatory,name=NumDelayedRequests",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ProducerRequestPurgatory.NumDelayedRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=ProducerRequestPurgatory,name=PurgatorySize",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.ProducerRequestPurgatory.PurgatorySize",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=FetchRequestPurgatory,name=NumDelayedRequests",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.FetchRequestPurgatory.NumDelayedRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.server:type=FetchRequestPurgatory,name=PurgatorySize",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.server.FetchRequestPurgatory.PurgatorySize",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.network:type=RequestMetrics,name=RequestsPerSec,request=Produce",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.network.RequestMetrics.ProduceRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchFollower",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.network.RequestMetrics.FetchFollowerRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.network:type=RequestMetrics,name=RequestsPerSec,request=FetchConsumer",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.network.RequestMetrics.FetchConsumerRequests",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.controller:type=KafkaController,name=ActiveControllerCount",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.controller.KafkaController.ActiveControllerCount",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.controller:type=KafkaController,name=OfflinePartitionsCount",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.controller.KafkaController.OfflinePartitionsCount",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.controller:type=ControllerStats,name=LeaderElectionRateAndTimeMs",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.controller.ControllerStats.LeaderElection",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.controller:type=ControllerStats,name=UncleanLeaderElectionsPerSec",
+          "attr": [
+            "Count"
+          ],
+          "resultAlias": "sdkafka.controller.ControllerStats.UncleanLeaderElection",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.consumer:type=ConsumerFetcherManager,name=MaxLag,*",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.consumer.ConsumerFetcherManager.MaxLag",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.consumer:type=ConsumerFetcherManager,name=MinFetchRate,*",
+          "attr": [
+            "Value"
+          ],
+          "resultAlias": "sdkafka.consumer.ConsumerFetcherManager.MinFetchRate",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "request-size-avg"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerRequestsMetrics.AllBrokersProducerRequestSize",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "request-rate"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerRequestsMetrics.AllBrokersProducerRequestRate",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "record-error-rate"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerStats.FailedSendsPerSec",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "outgoing-byte-rate"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerTopicMetrics.AllTopicsBytes",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "record-error-rate"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerTopicMetrics.AllTopicsDroppedMessages",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        },
+        {
+          "obj": "kafka.producer:type=producer-metrics,*",
+          "attr": [
+            "request-rate"
+          ],
+          "resultAlias": "sdkafka.producer.ProducerTopicMetrics.AllTopicsMessages",
+          "outputWriters": [
+            {
+              "@class": "com.googlecode.jmxtrans.model.output.StackdriverWriter",
+              "settings": {
+                "token": "STACKDRIVER_API_KEY",
+                "url": "https://jmx-gateway.stackdriver.com/v1/custom",
+                "source": "AWS_INSTANCE_ID"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
