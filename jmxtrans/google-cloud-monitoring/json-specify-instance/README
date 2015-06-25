@@ -1,4 +1,4 @@
 The files in this directory are automatically generated and will be overwritten.
 If you want to change them, please see
 ../../templates/generate-json-files-from-templates.py
-and the .json.tmpl files in that directory.
+and edit the .json.tmpl files in that directory.
